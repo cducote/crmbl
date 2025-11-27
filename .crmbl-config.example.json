@@ -1,0 +1,17 @@
+{
+  "rootPath": "./",
+  "ignore": [
+    "node_modules",
+    ".git",
+    "dist",
+    "build",
+    ".next",
+    "coverage",
+    ".cache",
+    "out",
+    ".turbo",
+    ".vercel"
+  ],
+  "outputPath": "./crmbl-map.json",
+  "readmeTemplate": "templates/readme-template.md"
+}

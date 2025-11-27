@@ -1,0 +1,96 @@
+# Monorepo Documentation Task
+
+I need you to help document the following directories in my monorepo by:
+1. Creating a README.md file in each directory
+2. Updating the crmbl-map.json file with metadata about each directory
+
+## New Directories to Document
+
+{{NEW_DIRS}}
+
+## Instructions
+
+For each directory above, please:
+
+1. **Analyze the directory contents** to understand:
+   - What is the purpose of this directory?
+   - What are the key files and their roles?
+   - What dependencies does it have (internal and external)?
+   - What is the complexity level (1-5)?
+   - How frequently does it change?
+
+2. **Create a README.md** in each directory with:
+   - Clear purpose statement
+   - Complexity score (1-5) with justification
+   - Change frequency (Stable/Moderate/Frequently Modified)
+   - List of key files with descriptions
+   - Dependencies (both internal paths and external npm packages)
+   - Entry points for the code
+   - Any important architectural notes
+
+3. **Update crmbl-map.json** with a new entry for each directory following this schema:
+
+```json
+{
+  "/path/to/directory": {
+    "purpose": "Brief description of what this directory does",
+    "complexity": 1-5,
+    "changeFrequency": "Stable|Moderate|Frequently Modified",
+    "entryPoints": ["main.ts", "index.ts"],
+    "internalDeps": ["/other/directory/path"],
+    "externalDeps": ["package-name"],
+    "readmePath": "/path/to/directory/README.md",
+    "keyFiles": [
+      {"file": "filename.ts", "description": "What it does"}
+    ],
+    "subdirectories": ["/path/to/subdirs"],
+    "lastUpdated": "ISO-8601 timestamp"
+  }
+}
+```
+
+## Current Configuration
+
+- Root path: {{ROOT_PATH}}
+- Output file: {{OUTPUT_PATH}}
+- Total new directories: {{TOTAL_NEW}}
+
+## Template Reference
+
+You can use this template structure for the READMEs:
+
+```markdown
+# [Directory Name]
+
+**Last Updated:** [YYYY-MM-DD]
+
+## Purpose
+[Description]
+
+## Complexity Score
+**[1-5]/5** - [Justification]
+
+## Change Frequency
+**[Stable|Moderate|Frequently Modified]**
+
+## Key Files
+| File | Description |
+|------|-------------|
+| `file.ts` | Description |
+
+## Entry Points
+- List entry point files
+
+## Dependencies
+
+### Internal Dependencies
+- `/path` - Description
+
+### External Dependencies
+- `package` - Description
+
+## Architecture Notes
+[Notes about patterns, decisions, gotchas]
+```
+
+Please be thorough and accurate in your documentation. Focus on providing useful context that will help other AI agents navigate this codebase efficiently.

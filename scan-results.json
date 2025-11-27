@@ -1,0 +1,17 @@
+{
+  "newDirs": [
+    "/examples",
+    "/examples/sample-output",
+    "/src",
+    "/templates",
+    "/tests"
+  ],
+  "missingDirs": [],
+  "unchangedDirs": [],
+  "stats": {
+    "total": 5,
+    "new": 5,
+    "missing": 0,
+    "documented": 0
+  }
+}

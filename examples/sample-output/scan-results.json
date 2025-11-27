@@ -1,0 +1,30 @@
+{
+  "newDirs": [
+    "/src/api/v3",
+    "/src/services",
+    "/packages/analytics"
+  ],
+  "missingDirs": [
+    "/src/legacy"
+  ],
+  "unchangedDirs": [
+    "/src",
+    "/src/api",
+    "/src/api/v1",
+    "/src/api/v2",
+    "/src/database",
+    "/src/database/migrations",
+    "/src/database/seeds",
+    "/src/utils",
+    "/packages",
+    "/packages/ui",
+    "/packages/config",
+    "/packages/types"
+  ],
+  "stats": {
+    "total": 16,
+    "new": 3,
+    "missing": 1,
+    "documented": 13
+  }
+}

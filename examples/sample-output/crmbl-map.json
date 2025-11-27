@@ -1,0 +1,101 @@
+{
+  "generated": "2025-01-15T10:30:00Z",
+  "directories": {
+    "/src": {
+      "purpose": "Main source code directory containing all application logic",
+      "complexity": 3,
+      "changeFrequency": "Frequently Modified",
+      "entryPoints": ["index.ts"],
+      "internalDeps": [],
+      "externalDeps": [],
+      "readmePath": "/src/README.md",
+      "keyFiles": [
+        {
+          "file": "index.ts",
+          "description": "Application entry point"
+        }
+      ],
+      "subdirectories": ["/src/api", "/src/database", "/src/utils"],
+      "lastUpdated": "2025-01-15T10:30:00Z"
+    },
+    "/src/api": {
+      "purpose": "REST API endpoints and business logic",
+      "complexity": 4,
+      "changeFrequency": "Frequently Modified",
+      "entryPoints": ["index.ts", "routes.ts"],
+      "internalDeps": ["/src/database", "/src/utils"],
+      "externalDeps": ["express", "zod", "helmet"],
+      "readmePath": "/src/api/README.md",
+      "keyFiles": [
+        {
+          "file": "routes.ts",
+          "description": "API route definitions and handlers"
+        },
+        {
+          "file": "middleware.ts",
+          "description": "Authentication and validation middleware"
+        },
+        {
+          "file": "controllers.ts",
+          "description": "Business logic controllers"
+        }
+      ],
+      "subdirectories": ["/src/api/v1", "/src/api/v2"],
+      "lastUpdated": "2025-01-15T10:30:00Z"
+    },
+    "/src/database": {
+      "purpose": "Database models, migrations, and connection logic",
+      "complexity": 3,
+      "changeFrequency": "Moderate",
+      "entryPoints": ["index.ts", "connection.ts"],
+      "internalDeps": [],
+      "externalDeps": ["prisma", "pg"],
+      "readmePath": "/src/database/README.md",
+      "keyFiles": [
+        {
+          "file": "connection.ts",
+          "description": "Database connection and pool management"
+        },
+        {
+          "file": "schema.prisma",
+          "description": "Prisma schema definitions"
+        }
+      ],
+      "subdirectories": ["/src/database/migrations", "/src/database/seeds"],
+      "lastUpdated": "2025-01-15T10:30:00Z"
+    },
+    "/src/utils": {
+      "purpose": "Shared utility functions and helpers",
+      "complexity": 2,
+      "changeFrequency": "Stable",
+      "entryPoints": ["index.ts"],
+      "internalDeps": [],
+      "externalDeps": ["lodash", "date-fns"],
+      "readmePath": "/src/utils/README.md",
+      "keyFiles": [
+        {
+          "file": "validation.ts",
+          "description": "Common validation utilities"
+        },
+        {
+          "file": "formatting.ts",
+          "description": "Data formatting helpers"
+        }
+      ],
+      "subdirectories": [],
+      "lastUpdated": "2025-01-15T10:30:00Z"
+    },
+    "/packages": {
+      "purpose": "Shared packages used across multiple apps in the monorepo",
+      "complexity": 3,
+      "changeFrequency": "Moderate",
+      "entryPoints": [],
+      "internalDeps": [],
+      "externalDeps": [],
+      "readmePath": "/packages/README.md",
+      "keyFiles": [],
+      "subdirectories": ["/packages/ui", "/packages/config", "/packages/types"],
+      "lastUpdated": "2025-01-15T10:30:00Z"
+    }
+  }
+}
